@@ -26,23 +26,23 @@ public class CreateJdbc {
             // Step 4: Create Table (if not exists)
             String createQuery = "CREATE TABLE IF NOT EXISTS students (id INT PRIMARY KEY, name VARCHAR(50))";
             stmt.executeUpdate(createQuery);
-            System.out.println("📁 Table created!");
+            System.out.println("Table created!");
 
             // Step 5: Insert Data
             String insertQuery = "INSERT INTO students VALUES (1, 'Sadhana')";
             stmt.executeUpdate(insertQuery);
-            System.out.println("✅ Data inserted!");
+            System.out.println("Data inserted!");
 
             // Step 6: Read Data
             ResultSet rs = stmt.executeQuery("SELECT * FROM students");
-            System.out.println("📋 Students in table:");
+            System.out.println("Students in table:");
             while (rs.next()) {
                 System.out.println(rs.getInt("id") + " - " + rs.getString("name"));
             }
 
             // Step 7: Close connection
             con.close();
-            System.out.println("🔒 Connection closed.");
+            System.out.println("Connection closed.");
 
         } catch (Exception e) {
             e.printStackTrace();
