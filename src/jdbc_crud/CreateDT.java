@@ -28,12 +28,6 @@ public class CreateDT {
 		}catch (Exception e) {
 			e.printStackTrace(); 
 		}
-		
-		
-		
-		
-		
-
 	}
 
 }
